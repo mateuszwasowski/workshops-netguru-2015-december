@@ -25,6 +25,13 @@ end
     birthdate: Faker::Time.between(Date.new(1990, 1, 1), Date.new(2005,1,1))
   )
 end
+students = Student.all
+100.times do
+  Payment.create!(
+  amount:  Faker::Number.between(100,1000),
+  student: students.sample
+  )
+end
 
 students = Student.all
 SubjectItem.all.each do |subject_item|
