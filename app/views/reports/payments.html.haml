@@ -1,0 +1,9 @@
+- breadcrumb :paymentstudents
+%table.table.table-condensed#payments
+  %thead
+    %tr
+      %th= t('student.columns.full_name')
+      %th= t('student.columns.actions')
+  %tbody
+    - students.each do |s|
+      = render partial: 'paymentstudent', locals: {student: s}

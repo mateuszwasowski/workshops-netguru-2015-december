@@ -6,6 +6,10 @@ crumb :students do |student|
   link t('navbar.students'), students_path
 end
 
+crumb :paymentstudents do |student|
+  link t('navbar.payments'), report_payments_path
+end
+
 crumb :student do |student|
   link "#{student.first_name} #{student.last_name}", student_path(student)
   parent :students
