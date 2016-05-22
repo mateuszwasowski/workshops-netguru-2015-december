@@ -5,5 +5,9 @@ before_script:
   - psql -c 'create database workshops_test;' -U postgres
 services:
   - postgresql
+script:
+  - RAILS_ENV=test bundle exec rake db:schema:load --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rspec spec/
 addons:
   postgresql: '9.3'
