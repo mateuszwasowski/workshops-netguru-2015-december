@@ -12,6 +12,7 @@ RSpec.describe Student do
   end
 
   describe 'associations' do
+    it { is_expected.to have_many :payments }
     it { is_expected.to have_many :subject_items }
     it { is_expected.to have_many :subject_item_notes }
     it { is_expected.to have_many :participations }
