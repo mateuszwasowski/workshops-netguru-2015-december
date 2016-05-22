@@ -1,0 +1,4 @@
+= simple_form_for payment, url: url_for(:action => 'create', :controller => 'payments'), method: :post do |f|
+  = f.input :student_id, :as => :hidden, :input_html => { :value => student.id }
+  = f.input :amount
+  = f.button :submit

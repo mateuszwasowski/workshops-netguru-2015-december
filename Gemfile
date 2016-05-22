@@ -21,6 +21,7 @@ gem 'dotenv-rails'
 gem 'gretel'
 
 gem 'jquery-datatables-rails', '~> 3.3.0'
+gem 'pry-rails'
 
 group :development do
   gem 'better_errors'
