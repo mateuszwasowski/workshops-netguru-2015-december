@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.3'
+ruby '2.3.1'
 
 gem 'bootstrap-sass'
 gem 'coffee-rails', '~> 4.1.0'
@@ -23,6 +23,7 @@ gem 'gretel'
 gem 'jquery-datatables-rails', '~> 3.3.0'
 gem 'pry-rails'
 gem 'faker'
+gem 'cancancan', '~> 1.10'
 
 group :development do
   gem 'better_errors'
