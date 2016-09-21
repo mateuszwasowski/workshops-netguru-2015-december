@@ -24,6 +24,7 @@ gem 'jquery-datatables-rails', '~> 3.3.0'
 gem 'pry-rails'
 gem 'faker'
 gem 'cancancan', '~> 1.10'
+gem 'rolify'
 
 group :development do
   gem 'better_errors'
