@@ -10,9 +10,10 @@
       = link_to edit_student_path(student), { title: t('shared.edit') } do
         %button.btn.btn-default
           = fa_icon "edit"
-      = link_to student_path(student), { method: :delete, title: t('shared.delete') } do
-        %button.btn.btn-default
-          = fa_icon "times"
+      - if can? :destroy, student
+        = link_to student_path(student), { method: :delete, title: t('shared.delete') } do
+          %button.btn.btn-default
+            = fa_icon "times"
       = link_to student_subjects_path(student), { title: t('shared.show_subject_items') } do
         %button.btn.btn-default
           = fa_icon "list"
